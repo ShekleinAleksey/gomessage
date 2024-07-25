@@ -1,5 +1,13 @@
 package main
 
-func main() {
+import (
+	"fmt"
+	"net/http"
+)
 
+func main() {
+	// http.HandleFunc("/message", handleMessage)
+
+	fmt.Println("Server started on port 8080")
+	http.ListenAndServe(":8080", nil)
 }
